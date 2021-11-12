@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "serverName": {
+        "value": "dbihserer21"
+      },
+      "sqlDBName": {
+        "value": "dbihsql"
+      },
+      
+      "administratorLogin": {
+        "value": "Sachin2022"
+      },
+      "administratorLoginPassword": {
+        "reference": {
+          "keyVault": {
+              "id": "/subscriptions/07339058-8536-4dae-8233-24abb3001046/resourceGroups/ARM_rg/providers/Microsoft.KeyVault/vaults/admin-email"
+          },
+          "secretName": "dbAdminPassword"
+      }
+     }
+    }
+  }
