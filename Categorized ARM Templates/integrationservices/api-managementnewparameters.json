@@ -13,13 +13,16 @@
         },
         "dealCloudApiName": {
 
-            "value": "ih-apis"
+            "value": "apim-iqeq-ih-env-dev"
         },
         "sku": {
             "value": "Developer"
         },
         "skuCount": {
             "value": "1"
+        },
+        "appInsightsLocation": {
+            "value": "centralus"
         }
        
     }

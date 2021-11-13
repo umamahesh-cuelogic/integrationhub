@@ -60,6 +60,7 @@
           "enablePartitioning": false,
           "enableExpress": false
         },
+        
         "dependsOn": [
           "[resourceId('Microsoft.ServiceBus/namespaces', parameters('dealCloudserviceBusNamespace'))]"
         ]

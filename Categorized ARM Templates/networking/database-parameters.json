@@ -6,11 +6,11 @@
         "value": "dbihserer21"
       },
       "sqlDBName": {
-        "value": "dbihsql"
+        "value": "db-ems-suitecrm-db"
       },
       
       "administratorLogin": {
-        "value": "Sachin2022"
+        "value": "dbemsligin"
       },
       "administratorLoginPassword": {
         "reference": {

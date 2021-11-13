@@ -125,7 +125,7 @@
                 "[resourceId('Microsoft.Network/networkSecurityGroups', 'UBUNTUVM32-nsg')]"
             ],
             "tags": {
-                "displayName": "UBUNTUVM32-VirtualNetwork"
+                "displayName": "[concat(toUpper(parameters('ubuntuName')), '-VirtualNetwork')]"
             },
             "properties": {
                 "addressSpace": {
@@ -135,11 +135,11 @@
                 },
                 "subnets": [
                     {
-                        "name": "UBUNTUVM32-VirtualNetwork-Subnet",
+                        "name": "[concat(toUpper(parameters('ubuntuName')), '-VirtualNetwork-Subnet')]",
                         "properties": {
                             "addressPrefix": "10.0.0.0/24",
                             "networkSecurityGroup": {
-                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'UBUNTUVM32-nsg')]"
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', concat(toUpper(parameters('ubuntuName')), '-nsg'))]"
                             }
                         }
                     }
@@ -152,11 +152,11 @@
             "apiVersion": "2020-11-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/publicIPAddresses', 'UBUNTUVM32-PublicIP')]",
-                "[resourceId('Microsoft.Network/virtualNetworks', 'UBUNTUVM32-VirtualNetwork')]"
+                "[resourceId('Microsoft.Network/publicIPAddresses', concat(toUpper(parameters('ubuntuName')), '-PublicIP'))]",
+                "[resourceId('Microsoft.Network/virtualNetworks', concat(toUpper(parameters('ubuntuName')), '-VirtualNetwork'))]"
             ],
             "tags": {
-                "displayName": "UBUNTUVM32-NetworkInterface"
+                "displayName": "[concat(toUpper(parameters('ubuntuName')), '-NetworkInterface')]"
             },
             "properties": {
                 "ipConfigurations": [
@@ -165,10 +165,10 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'UBUNTUVM32-PublicIP')]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', concat(toUpper(parameters('ubuntuName')), '-PublicIP'))]"
                             },
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'UBUNTUVM32-VirtualNetwork', 'UBUNTUVM32-VirtualNetwork-Subnet')]"
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', concat(toUpper(parameters('ubuntuName')), '-VirtualNetwork'), concat(toUpper(parameters('ubuntuName')), '-VirtualNetwork-Subnet'))]"
                             }
                         }
                     }
@@ -181,10 +181,10 @@
             "apiVersion": "2021-03-01",
             "location": "[parameters('location')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', 'UBUNTUVM32-NetworkInterface')]"
+                "[resourceId('Microsoft.Network/networkInterfaces', concat(toUpper(parameters('ubuntuName')), '-NetworkInterface'))]"
             ],
             "tags": {
-                "displayName": "UBUNTUVM32"
+                "displayName": "[parameters('ubuntuName')]"
             },
             "properties": {
                 "hardwareProfile": {
@@ -203,7 +203,7 @@
                         "version": "latest"
                     },
                     "osDisk": {
-                        "name": "UBUNTUVM32-OSDisk",
+                        "name": "[concat(toUpper(parameters('ubuntuName')), '-OSDisk')]",
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
                     }
@@ -211,7 +211,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'UBUNTUVM32-NetworkInterface')]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(toUpper(parameters('ubuntuName')), '-NetworkInterface'))]"
                         }
                     ]
                 },

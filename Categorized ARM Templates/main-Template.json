@@ -187,7 +187,7 @@
       "parametersLink": {
          "uri": "[concat(parameters('blobAzureFunctionTemplateParameterUrl'), '?', parameters('templateSasToken'))]",
         "contentVersion": "1.0.0.0"
-      },
+      }
       
       }
     },

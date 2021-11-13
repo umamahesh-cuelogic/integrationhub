@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "ihdbfordealcloud" 
+            "value": "ems-suitecrm-db" 
     
         },
         "location": {
@@ -16,11 +16,10 @@
             "value": "Standard_RAGRS"
         },
         "ubuntuName": {
-            "value": "ubuntuvm32"
-
+            "value": "EMS-SUITECRM"
         },
         "adminUserName": {
-            "value": "Sachin2021" 
+            "value": "ihub@db" 
         },
         "adminPassword": {
             "reference": {
