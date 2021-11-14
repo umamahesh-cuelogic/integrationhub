@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "dealCloudserviceBusNamespace": {
-      "value": "fn-dealcloud-servicebus"
+      "value": "fn-dealcloud-sb-dev"
     },
     "dealCloudQueueName": {
-      "value": "fn-dealcloud-queue"
+      "value": "fn-dealcloud-queue-dev"
     },
     
     "location": {

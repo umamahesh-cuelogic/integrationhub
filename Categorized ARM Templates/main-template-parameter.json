@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "templateSasToken": {
-            "value": "sp=r&st=2021-11-12T06:58:02Z&se=2021-11-16T14:58:02Z&spr=https&sv=2020-08-04&sr=c&sig=YCqGLGwriF6GFMQQT1hliyzu1Qz5oYjLovtHzRIxYQM%3D"
+            "value": "sp=r&st=2021-11-14T09:18:45Z&se=2021-11-26T17:18:45Z&spr=https&sv=2020-08-04&sr=c&sig=iuL%2FhPneKAlGD8R3QHBD6UC5O1Ov0xssoDQMMW%2Br9hs%3D"
         },
         "blobAzureFunctionTemplateUrl":{
             "value": "https://storageihub.blob.core.windows.net/containerihub/appservice/azure-functionapp-deploy.json"
@@ -18,10 +18,10 @@
             "value": "https://storageihub.blob.core.windows.net/containerihub/appservice/appservicelinkedtemplate.parameters.json"
         },
         "blobStorageAccountTemplateUrl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/network/storaageaccounttemplate.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/network/storaage-account-template.json"
         },
         "blobstorageaccounttemplateparameterurl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/network/storageaccounttemplate.parameter.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/network/storage-accounttemplate-parameter.json"
         },        
         "blobVnetTemplateUrl": {
             "value": "https://storageihub.blob.core.windows.net/containerihub/network/vnet.json"
@@ -36,36 +36,31 @@
             "value": "https://storageihub.blob.core.windows.net/containerihub/network/database-parameters.json"
         },
         "blobApiManagementTemplateUrl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/api-management.template.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/api-management-template.json"
         },
         "blobApiManagementTemplateParameterUrl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/api-managementnewparameters.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/api-managementparameters.json"
         },
         "blobEventHubTemplateUrl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/eventhubTemplate.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/eventhub-template.json"
         },
 		 
 		 "blobEventHubTemplateParameterUrl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/eventhub.parameters.dev.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/eventhub-parameters.json"
         },
         "blobLogicAppTemplateUrl":{
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/logicapp.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/logicapp.json"
         },
         "blobLogicAppTemplateParameterUrl":{
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/logicapp.parameters.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/logicapp.parameters.json"
         },
         "blobServiceBusTemplateUrl":{
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/servicebusdeploy.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/servicebus-deploy.json"
         },
         "blobServiceBusTemplateParameterUrl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/servicebus.parameters.json"
-        },
-        "blobkeyvaulttemplateurl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/api-management.template.json"
-        },
-        "blobkeyvaulttemplateparameterurl": {
-            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservice/api-managementnewparameters.json"
+            "value": "https://storageihub.blob.core.windows.net/containerihub/integrationservices/servicebus-parameters.json"
         }
+       
         
 
 

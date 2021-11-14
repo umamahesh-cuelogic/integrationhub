@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "ems-suitecrm-db" 
+            "value": "Network-sg-iq" 
     
         },
         "location": {
@@ -16,10 +16,11 @@
             "value": "Standard_RAGRS"
         },
         "ubuntuName": {
-            "value": "EMS-SUITECRM"
+            "value": "ubuntuvm-iq"
+
         },
         "adminUserName": {
-            "value": "ihub@db" 
+            "value": "Sachin2021" 
         },
         "adminPassword": {
             "reference": {
@@ -30,8 +31,8 @@
             }
         },
         "ubuntuStorageName": {
-            "value": "ihdbstorage"
+            "value": "storageihub"
         }
-
+        
     }
 }

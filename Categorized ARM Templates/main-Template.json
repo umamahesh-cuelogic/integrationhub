@@ -4,119 +4,118 @@
     "parameters": {
 		 "templateSasToken": {
       "type": "string",
-      "defaultValue":"xyz",
       "metadata": {
         "description": "shared sas token for linked templates."
       }
     },
     "blobEventHubTemplateUrl": {
       "type": "string",
-      "defaultValue": "logs",
+      "defaultValue": "eventHub url",
       "metadata": {
         "description": "event hub linked template url."
       }
     },
 	"blobeventhubtemplateparameterurl": {
       "type": "string",
-      "defaultValue": "logs",
+      "defaultValue": "event hub parameter url",
       "metadata": {
         "description": "event hub linked template parameters url."
       }
     },
     "blobAzureFunctionTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "url of azure function template",
       "metadata": {
         "description": "azure function app linked template url."
       }
     },
     "blobAzureFunctionTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "url of function app ",
       "metadata": {
         "description": "azure function app linked template parameters url."
       }
     },
     "blobAppServiceTemplateUrl": {
       "type": "string",
-      "defaultValue": "appser",
+      "defaultValue": "appserervice templateurl",
       "metadata": {
         "description": "app service linked template url."
       }
     },
     "blobAppServiceTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "app service template parameter url",
       "metadata": {
         "description": "app service linked template parameters url."
       }
     },
     "blobServiceBusTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "service bus template url",
       "metadata": {
         "description": "service bus linked template url."
       }
     },
     "blobServiceBusTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "service parametre url",
       "metadata": {
         "description": "service bus linked template parameters url."
       }
     },
     "blobStorageAccountTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "storage account template url",
       "metadata": {
         "description": "storage account linked template url."
       }
     },
     "blobstorageaccounttemplateparameterurl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "storage account template parametere url",
       "metadata": {
         "description": "storage account linked template parameter url."
       }
     },
     "blobApiManagementTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "APIM template url",
       "metadata": {
         "description": "api management linked template url."
       }
     },
     "blobApiManagementTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "APIM temp parameters url",
       "metadata": {
         "description": "api management linked template parameter url."
       }
     },
     "blobVnetTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "vnet template url",
       "metadata": {
         "description": "vnet linked template url."
       }
     },
  "blobVnetTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "vnet params url",
       "metadata": {
         "description": "vnet linked template parameter url."
       }
     },
   "blobLogicAppTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "logic app url",
       "metadata": {
         "description": "logicapp linked template url."
       }
     },
     "blobLogicAppTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "logicApp params url",
       "metadata": {
         "description": "logicapp linked template parameter url."
       }
@@ -130,21 +129,19 @@
     },
     "blobkeyvaulttemplateparameterurl": {
       "type": "string",
-      "defaultValue": "af",
+      "defaultValue": "keyvault url",
       "metadata": {
         "description": "KeyVault linked template parameter url."
       }
     },
     "blobDatabaseTemplateUrl": {
       "type": "string",
-      "defaultValue": "af",
       "metadata": {
         "description": "database linked template url."
       }
     },
     "blobDatabaseTemplateParameterUrl": {
       "type": "string",
-      "defaultValue": "af",
       "metadata": {
         "description": "KeyVault linked template parameter url."
       }
@@ -174,11 +171,11 @@
         
       }
     },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateAzureFunction",
-      "properties": {
+       {
+     "type": "Microsoft.Resources/deployments",
+    "apiVersion": "2021-04-01",
+    "name": "linkTemplateAzureFunction",
+   "properties": {
         "mode": "Incremental",
         "templateLink": {
          "uri": "[concat(parameters('blobAzureFunctionTemplateUrl'), '?', parameters('templateSasToken'))]",
@@ -191,23 +188,23 @@
       
       }
     },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateAppService",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobAppServiceTemplateUrl'),'?', parameters('templateSasToken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobAppServiceTemplateParameterUrl'),'?', parameters('templateSasToken'))]",
-        "contentVersion": "1.0.0.0"
-      }
+   {
+     "type": "Microsoft.Resources/deployments",
+     "apiVersion": "2021-04-01",
+     "name": "linkTemplateAppService",
+     "properties": {
+       "mode": "Incremental",
+       "templateLink": {
+        "uri": "[concat(parameters('blobAppServiceTemplateUrl'),'?', parameters('templateSasToken'))]",
+       "contentVersion": "1.0.0.0"
+     },
+     "parametersLink": {
+        "uri": "[concat(parameters('blobAppServiceTemplateParameterUrl'),'?', parameters('templateSasToken'))]",
+       "contentVersion": "1.0.0.0"
+     }
         
-      }
-    },
+     }
+   },
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
@@ -242,23 +239,23 @@
         
       }
     },
-    {
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2021-04-01",
-      "name": "linkTemplateVnet",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-         "uri": "[concat(parameters('blobVnetTemplateUrl'),'?', parameters('templateSasToken'))]",
-        "contentVersion": "1.0.0.0"
-      },
-      "parametersLink": {
-         "uri": "[concat(parameters('blobVnetTemplateParameterUrl'),'?', parameters('templateSasToken'))]",
-        "contentVersion": "1.0.0.0"
-      }
-        
-      }
-    },
+  //  {
+  //    "type": "Microsoft.Resources/deployments",
+  //    "apiVersion": "2021-04-01",
+  //    "name": "linkTemplateVnet",
+  //    "properties": {
+  //      "mode": "Incremental",
+  //      "templateLink": {
+  //       "uri": "[concat(parameters('blobVnetTemplateUrl'),'?', parameters('templateSasToken'))]",
+  //      "contentVersion": "1.0.0.0"
+  //    },
+  //    "parametersLink": {
+  //       "uri": "[concat(parameters('blobVnetTemplateParameterUrl'),'?', parameters('templateSasToken'))]",
+  //      "contentVersion": "1.0.0.0"
+  //    }
+       
+  //    }
+  // },
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",

@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "eventHubname": {
-        "value": "eh-evntHub"
+        "value": "evnt-hub-iq-dev"
       },
       "location": {
           "value": "eastus" 

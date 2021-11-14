@@ -13,7 +13,7 @@
         },
         "dealCloudApiName": {
 
-            "value": "apim-iqeq-ih-env-dev"
+            "value": "apim-iqeq-env-dev"
         },
         "sku": {
             "value": "Developer"

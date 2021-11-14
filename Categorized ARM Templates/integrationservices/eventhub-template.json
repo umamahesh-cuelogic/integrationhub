@@ -4,7 +4,7 @@
   "parameters": {
     "eventHubname": {
       "type": "string",
-      "defaultValue":"ih-evntHub",
+      "defaultValue":"ihevnthub",
       "metadata": {
         "description": "Specifies a project name that is used to generate the Event Hub name and the Namespace name."
       }
@@ -26,6 +26,8 @@
     }
   },
   "variables": {
+            "applicationInsightsName": "[parameters('eventHubname')]",
+
     "eventHubNamespaceName": "[concat(parameters('eventHubname'))]",
     "eventHubName": "[parameters('eventHubname')]"
   },
@@ -34,7 +36,7 @@
       "type": "Microsoft.EventHub/namespaces",
       "apiVersion": "2018-01-01-preview",
       "name": "[variables('eventHubNamespaceName')]",
-      "location": "[parameters('location')]",
+      "location": "[parameters('eventHubname')]",
       "sku": {
         "name": "[parameters('eventHubSku')]",
         "tier": "[parameters('eventHubSku')]",
@@ -57,6 +59,22 @@
         "messageRetentionInDays": 7,
         "partitionCount": 1
       }
-    }
+    },
+     {
+            "type": "microsoft.insights/components",
+            "apiVersion": "2020-02-02",
+            "name": "[variables('applicationInsightsName')]",
+            "location": "[parameters('location')]",
+            "tags": {
+                "[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('applicationInsightsName')))]": "Resource"
+            },
+            "kind": "web",
+            "properties": {
+                "Application_Type": "web",
+                "Request_Source": "rest"
+            }
+        }
+        
+    
   ]
 }

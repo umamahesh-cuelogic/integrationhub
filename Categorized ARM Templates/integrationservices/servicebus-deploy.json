@@ -9,9 +9,9 @@
       }
     },
     "parameters": {
-      "dealCloudserviceBusNamespace": {
+      "dealCloudServiceBusNameSpace": {
         "type": "string",
-        "defaultValue": "fn-dealcloud-servicebus",
+        "defaultValue": "fndealcloudserviceBus",
         "metadata": {
           "description": "Name of the Service Bus namespace"
         }
@@ -36,7 +36,7 @@
       {
         "type": "Microsoft.ServiceBus/namespaces",
         "apiVersion": "2017-04-01",
-        "name": "[parameters('dealCloudserviceBusNamespace')]",
+        "name": "[parameters('dealCloudServiceBusNameSpace')]",
         "location": "[parameters('location')]",
         "sku": {
           "name": "Standard"
@@ -46,7 +46,7 @@
       {
         "type": "Microsoft.ServiceBus/namespaces/queues",
         "apiVersion": "2017-04-01",
-        "name": "[format('{0}/{1}', parameters('dealCloudserviceBusNamespace'), parameters('dealCloudQueueName'))]",
+        "name": "[format('{0}/{1}', parameters('dealCloudServiceBusNameSpace'), parameters('dealCloudQueueName'))]",
         "properties": {
           "lockDuration": "PT5M",
           "maxSizeInMegabytes": 1024,

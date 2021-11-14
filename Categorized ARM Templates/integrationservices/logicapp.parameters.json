@@ -5,7 +5,13 @@
 
 
       "logicAppName": {
-        "value": "la-dealcloud-polling"
+        "value": "la-upset-ems-dev"
+      },
+      "testUri": {
+          "value": "https://status.azure.com/en-us/status/"
+      },
+      "location": {
+          "value": "westus"
       }
     }
   }

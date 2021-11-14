@@ -6,7 +6,7 @@
             "value": "eastus"
         },
         "storageAccountName": {
-            "value": "sg-fn-dealcloud-polling"
+            "value": "sg-fn-dealcloud-dev"
         },
         "accountType": {
             "value": "Standard_RAGRS"
