@@ -1,38 +1,44 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "name": {
-            "value": "Network-sg-iq" 
-    
-        },
         "location": {
             "value": "eastus"
         },
-        "protocol": {
-            "value": "TCP"
+        "extendedLocation": {
+            "value": {}
         },
-        "skuname": {
-            "value": "Standard_RAGRS"
+        "virtualNetworkName": {
+            "value": "ihvnet"
         },
-        "ubuntuName": {
-            "value": "ubuntuvm-iq"
-
+        "resourceGroup": {
+            "value": "ARM_rg"
         },
-        "adminUserName": {
-            "value": "Sachin2021" 
+        "addressSpaces": {
+            "value": [
+                "10.0.0.0/16"
+            ]
         },
-        "adminPassword": {
-            "reference": {
-                "keyVault": {
-                    "id": "/subscriptions/07339058-8536-4dae-8233-24abb3001046/resourceGroups/ARM_rg/providers/Microsoft.KeyVault/vaults/admin-email"
-                },
-                "secretName": "vnetAdminPassword"
-            }
+        "ipv6Enabled": {
+            "value": false
         },
-        "ubuntuStorageName": {
-            "value": "storageihub"
+        "subnetCount": {
+            "value": 1
+        },
+        "subnet0_name": {
+            "value": "default"
+        },
+        "subnet0_addressRange": {
+            "value": "10.0.0.0/24"
+        },
+        "ddosProtectionPlanEnabled": {
+            "value": false
+        },
+        "firewallEnabled": {
+            "value": false
+        },
+        "bastionEnabled": {
+            "value": false
         }
-        
     }
 }

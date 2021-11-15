@@ -61,6 +61,7 @@
             "[resourceId('Microsoft.Sql/servers', concat(parameters('serverName')))]"
           ]
         }
+        
       ]
     }
   ]

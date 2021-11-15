@@ -10,7 +10,7 @@
       },
       
       "administratorLogin": {
-        "value": "dbemsligin"
+        "value": "dbemsloigin"
       },
       "administratorLoginPassword": {
         "reference": {

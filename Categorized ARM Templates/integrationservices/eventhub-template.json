@@ -36,7 +36,7 @@
       "type": "Microsoft.EventHub/namespaces",
       "apiVersion": "2018-01-01-preview",
       "name": "[variables('eventHubNamespaceName')]",
-      "location": "[parameters('eventHubname')]",
+     "location": "eastus",
       "sku": {
         "name": "[parameters('eventHubSku')]",
         "tier": "[parameters('eventHubSku')]",
@@ -51,7 +51,7 @@
       "type": "Microsoft.EventHub/namespaces/eventhubs",
       "apiVersion": "2017-04-01",
       "name": "[concat(variables('eventHubNamespaceName'), '/', variables('eventHubName'))]",
-      "location": "[parameters('location')]",
+      "location": "eastus",
       "dependsOn": [
         "[resourceId('Microsoft.EventHub/namespaces', variables('eventHubNamespaceName'))]"
       ],
@@ -64,7 +64,7 @@
             "type": "microsoft.insights/components",
             "apiVersion": "2020-02-02",
             "name": "[variables('applicationInsightsName')]",
-            "location": "[parameters('location')]",
+            "location": "eastus",
             "tags": {
                 "[concat('hidden-link:', resourceId('Microsoft.Web/sites', variables('applicationInsightsName')))]": "Resource"
             },
