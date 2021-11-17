@@ -9,7 +9,7 @@
             "value": {}
         },
         "virtualNetworkName": {
-            "value": "ihvnet"
+            "value": "VNet"
         },
         "resourceGroup": {
             "value": "ARM_rg"
@@ -39,6 +39,12 @@
         },
         "bastionEnabled": {
             "value": false
+        },
+        "applicationInsightsName": {
+            "value": "vnetappinsights"
+        },
+        "appInsightsLocation": {
+            "value": "westus" 
         }
     }
 }

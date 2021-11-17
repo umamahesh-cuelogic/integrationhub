@@ -11,7 +11,7 @@
   "parameters": {
     "logicAppName": {
       "type": "string",
-       "defaultValue": "laupsertemstarget",
+       "defaultValue": "la-upset-ems-target",
       "metadata": {
         "description": "The name of the logic app to create."
       }
@@ -29,8 +29,21 @@
       "metadata": {
         "description": "Location for all resources."
       }
+    },
+    "applicationInsightsName": {
+      "type": "string",
+      "metadata": {
+        "description": "description"
+      }
+    },
+    "appInsightsLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "description"
+      }
     }
   },
+  
   "functions": [],
 
   "variables": {
@@ -81,6 +94,20 @@
           }
         }
       }
-    }
+    },
+     {
+            "type": "microsoft.insights/components",
+            "apiVersion": "2020-02-02",
+            "name": "[parameters('applicationInsightsName')]",
+            "location": "[parameters('appInsightsLocation')]",
+            "tags": {
+                "[concat('hidden-link:', resourceId('Microsoft.Web/sites', parameters('applicationInsightsName')))]": "Resource"
+            },
+            "kind": "web",
+            "properties": {
+                "Application_Type": "web",
+                "Request_Source": "rest"
+            }
+        }
   ]
 }

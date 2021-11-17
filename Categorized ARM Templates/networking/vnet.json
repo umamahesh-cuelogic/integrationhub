@@ -37,7 +37,19 @@
         },
         "bastionEnabled": {
             "type": "Bool"
-        }
+        },
+         "applicationInsightsName": {
+      "type": "string",
+      "metadata": {
+        "description": "description"
+      }
+    },
+    "appInsightsLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "description"
+      }
+    }
     },
     "variables": {},
     "resources": [
@@ -65,7 +77,20 @@
                 ],
                 "enableDdosProtection": "[parameters('ddosProtectionPlanEnabled')]"
             }
+        },
+        {
+            "type": "microsoft.insights/components",
+            "apiVersion": "2020-02-02",
+            "name": "[parameters('applicationInsightsName')]",
+            "location": "[parameters('appInsightsLocation')]",
+            "tags": {
+                "[concat('hidden-link:', resourceId('Microsoft.Web/sites', parameters('applicationInsightsName')))]": "Resource"
+            },
+            "kind": "web",
+            "properties": {
+                "Application_Type": "web",
+                "Request_Source": "rest"
+            }
         }
-        
     ]
 }

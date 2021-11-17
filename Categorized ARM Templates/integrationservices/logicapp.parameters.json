@@ -12,6 +12,12 @@
       },
       "location": {
           "value": "westus"
+      },
+      "applicationInsightsName": {
+          "value": "la-appinsights"
+      },
+      "appInsightsLocation": {
+          "value": "westus" 
       }
     }
   }

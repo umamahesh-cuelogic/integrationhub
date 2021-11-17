@@ -239,23 +239,23 @@
         
       }
     },
-  //  {
-  //    "type": "Microsoft.Resources/deployments",
-  //    "apiVersion": "2021-04-01",
-  //    "name": "linkTemplateVnet",
-  //    "properties": {
-  //      "mode": "Incremental",
-  //      "templateLink": {
-  //       "uri": "[concat(parameters('blobVnetTemplateUrl'),'?', parameters('templateSasToken'))]",
-  //      "contentVersion": "1.0.0.0"
-  //    },
-  //    "parametersLink": {
-  //       "uri": "[concat(parameters('blobVnetTemplateParameterUrl'),'?', parameters('templateSasToken'))]",
-  //      "contentVersion": "1.0.0.0"
-  //    }
+   {
+     "type": "Microsoft.Resources/deployments",
+     "apiVersion": "2021-04-01",
+     "name": "linkTemplateVnet",
+     "properties": {
+       "mode": "Incremental",
+       "templateLink": {
+        "uri": "[concat(parameters('blobVnetTemplateUrl'),'?', parameters('templateSasToken'))]",
+       "contentVersion": "1.0.0.0"
+     },
+     "parametersLink": {
+        "uri": "[concat(parameters('blobVnetTemplateParameterUrl'),'?', parameters('templateSasToken'))]",
+       "contentVersion": "1.0.0.0"
+     }
        
-  //   }
- // },
+     }
+  },
     {
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2021-04-01",
@@ -306,9 +306,9 @@
       }
         
       }
-    // },
+    }
 
-     
+    // },
     // {
     //   "type": "Microsoft.Resources/deployments",
     //   "apiVersion": "2021-04-01",
@@ -325,7 +325,7 @@
     //   }
         
     //   }
-    }
+     
   ],
   "outputs": {}
 }

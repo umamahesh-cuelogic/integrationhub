@@ -11,6 +11,12 @@
     
     "location": {
         "value": "westus"
+    },
+    "applicationInsightsName": {
+        "value": "dealcloudappinsights"
+    },
+    "appInsightsLocation": {
+        "value": "westus"
     }
   }
 }
